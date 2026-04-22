@@ -1,343 +1,332 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ما هو أوبن كارت؟ | أوبن كارت العرب</title>
-  <meta name="description" content="أوبن كارت العرب هو المصدر الأول لدعم وتطوير منصات التجارة الإلكترونية باستخدام OpenCart باللغة العربية. نقدم خدمات تصميم المتاجر الإلكترونية، التطوير، والدعم الفني بأعلى جودة لعملاءنا في العالم العربي.">
-  <meta name="keywords" content="أوبن كارت, تصميم متجر إلكتروني, تطوير متاجر إلكترونية, OpenCart, التجارة الإلكترونية, دعم فني للتجارة الإلكترونية, تصميم مواقع عربية, حلول التجارة الإلكترونية, استضافة مواقع, متجر إلكتروني عربي, دعم أوبن كارت, إنشاء متجر إلكتروني بالعربي">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCart Arab | أوبن كارت العرب</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --main-blue: #2c3e50; --oc-blue: #27ae60; --gold: #f39c12; }
+        body { font-family: 'Cairo', sans-serif; background-color: #f8f9fa; color: #333; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 100px 0; border-bottom-left-radius: 50% 20px; border-bottom-right-radius: 50% 20px; }
+        
+        /* Cards Hover Effect */
+        .custom-card { transition: all 0.3s ease; border: none; border-radius: 15px; overflow: hidden; }
+        .custom-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        .btn-community { background-color: var(--oc-blue); border: none; font-weight: bold; }
+        .btn-community:hover { background-color: #219150; }
 
-  
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-
-  
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f9fc;
-      color: #333;
-      line-height: 1.8;
-    }
-
-    header {
-      background-color: #005fa3;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    header img {
-  border: 2px solid #005fa3;
-  padding: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .price-card.featured { border: 2px solid var(--oc-blue); transform: scale(1.05); z-index: 2; }
+        .feature-icon { font-size: 2.5rem; color: var(--oc-blue); margin-bottom: 15px; }
+        /* تنسيقات باقات الدعم */
+.support-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
 }
 
+.support-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
 
+.support-icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
 
-    nav {
-      background-color: #004a85;
-      padding: 10px 0;
-      text-align: center;
+.support-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.support-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* تنسيقات الجدول */
+.comparison-table thead {
+    background: linear-gradient(90deg, #2c3e50, #3498db);
+}
+
+.comparison-table tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+.comparison-table td, .comparison-table th {
+    padding: 1.5rem !important;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .support-card {
+        margin-bottom: 15px;
     }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    h2 {
-      color: #005fa3;
-      margin-top: 40px;
-    }
-
-    ul {
-      padding-right: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #005fa3;
-      color: white;
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #f0f0f0;
-    }
-
-    footer {
-      background-color: #e3e3e3;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: .95rem;
-      color: #333;
-    }
-
-    .email-display {
-      margin: 20px 0;
-      font-weight: bold;
-      direction: ltr;
-      text-align: center;
-      color: #005fa3;
-      font-size: 1.1rem;
-    }
-
-    .social-links {
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      color: #005fa3;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .social-links i {
-      margin-left: 5px;
-    }
-  </style>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14L9509493"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-14L9509493');
-  </script>
+}
+    </style>
 </head>
-
 <body>
-  <header>
-    <img src="images/logo-opencartarab.png" alt="شعار أوبن كارت العرب" width="228" height="68" style="max-width:100%; height:auto; margin-bottom: 10px;">
-    <h1>ما هو أوبن كارت؟</h1>
-    <p>نظام مجاني ومفتوح المصدر لإنشاء المتاجر الإلكترونية</p>
-  </header>
 
-  <nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="about-us.html">من نحن</a>
-  <a href="payment-policy.html">سياسة الدفع والاسترجاع</a>
-  <a href="index.html#contact">تواصل معنا</a>
-</nav>
+    <div id="header-placeholder"></div>
 
-
-  <main>
-    <section id="about">
-      <h2>نبذة عن أوبن كارت</h2>
-      <p>
-        أوبن كارت (OpenCart) هو نظام إدارة محتوى (CMS) متخصص في التجارة الإلكترونية.
-        يتميز ببساطته، وقوته، ودعمه الكبير للغات والعملات، مما يجعله خيارًا مثاليًا لأصحاب المتاجر الإلكترونية في العالم العربي.
-      </p>
+    <section class="hero overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-black mb-4">انطلق بتجارتك الإلكترونية مع OpenCart</h1>
+                    <p class="lead mb-5 text-light">المنصة الأقوى عالمياً لإنشاء المتاجر الإلكترونية، الآن معربة ومدعومة بالكامل لتناسب احتياجات السوق العربي.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-light btn-lg px-4 fw-bold">تحميل الإصدار العربي</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">استكشف المميزات</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-shopping-cart fa-10x opacity-25"></i>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="features">
-      <h2>مميزات أوبن كارت</h2>
-      <ul>
-        <li>نظام مجاني ومفتوح المصدر 100%</li>
-        <li>واجهة تحكم سهلة وسلسة</li>
-        <li>دعم متعدد اللغات والعملات</li>
-        <li>قوالب وإضافات كثيرة</li>
-        <li>دعم لإدارة الطلبات والمخزون والعملاء</li>
-        <li>تحسين محركات البحث (SEO) بشكل ممتاز</li>
-      </ul>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">الإصدارات العربية المعتمدة</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card custom-card h-100 text-center p-4">
+                        <div class="fw-bold text-muted mb-2">الإصدار الأخير</div>
+                        <h3 class="h4 color-oc">4.0.2.3</h3>
+                        <p class="text-secondary small">تاريخ الصدور: 2024</p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">تحميل</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card h-100 text-center p-4 shadow-sm border-primary">
+                        <div class="p-2 bg-primary text-white rounded-pill mb-3">جميع الإصدارات</div>
+                        <i class="fas fa-archive fa-3x text-primary mb-3"></i>
+                        <p>تصفح أرشيف التعريبات السابقة</p>
+                        <a href="#" class="btn btn-primary mt-auto">عرض الكل</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>لماذا أوبن كارت العرب؟</h2>
-      <p>
-          في أوبن كارت العرب نعمل على تقديم حلول عملية وموثوقة
-          لأصحاب المتاجر الإلكترونية، مع تركيز خاص على المستخدم العربي
-          من حيث الدعم، الأداء، وسهولة الاستخدام.
-      </p>
-    </section>
-
-    <section>
-  <h2>لماذا يثق العملاء في أوبن كارت العرب؟</h2>
-    <ul>
-      <li>شريك معتمد في منصة OpenCart</li>
-      <li>إدارة رقمية احترافية وتواصل موثق</li>
-      <li>دفع آمن عبر PayPal</li>
-      <li>خبرة متخصصة في OpenCart فقط</li>
-    </ul>
-    </section>
-
-    <section id="releases">
-      <h2>إصدارات أوبن كارت العربية</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>الإصدار</th>
-            <th>تاريخ الإصدار</th>
-            <th>رابط التنزيل</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3.0.5.0</td>
-            <td>Jan, 28 2026</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V3050.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v3.0.5.0'});">
-                 تنزيل (17.1MB)
-              </a>
-            </td>
-          <tr>
-            <td>4.1.0.3</td>
-            <td>Jan, 27 2026</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V4103.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v4.1.0.3'});">
-                 تنزيل (24.0MB)
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>3.0.4.1</td>
-            <td>Jun, 22 2025</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V3041.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v3.0.4.1'});">
-                 تنزيل (16.8MB)
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>4.1.0.0</td>
-            <td>Mar, 14 2025</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V4100.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v4.1.0.0'});">
-                 تنزيل (23.8MB)
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>3.0.4.0</td>
-            <td>Aug, 11 2024</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V3040.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v3.0.4.0'});">
-                 تنزيل (16.6MB)
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>3.0.3.9</td>
-            <td>Oct, 29 2023</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V3039.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v3.0.3.9'});">
-                 تنزيل (16.5MB)
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>4.0.2.3</td>
-            <td>Sep, 28 2023</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V4023.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v4.0.2.3'});">
-                 تنزيل (21.5MB)
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>3.0.3.7</td>
-            <td>Feb, 20 2021</td>
-            <td>
-              <a href="https://downloads.opencartarab.com/releases/opencart_Arabic_V3037.zip"
-                 target="_blank" rel="noopener noreferrer"
-                 onclick="gtag('event', 'download', {'event_category': 'File', 'event_label': 'OpenCart Arabic v3.0.3.7'});">
-                 تنزيل (16.2MB)
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer id="contact">
-    <div class="email-display">
-      📧 للتواصل <br>
-      <span>info@opencartarab.com</span>
+    <section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">لماذا تختار OpenCart بدلاً من المنصات الأخرى؟</h2>
+        <div class="table-responsive shadow rounded-4">
+            <table class="table table-hover mb-0 text-center align-middle comparison-table">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th class="py-4">الميزة / الخدمة</th>
+                        <th class="py-4">OpenCart</th>
+                        <th class="py-4">المنصات الأخرى (SaaS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-bold">الملكية الكاملة</td>
+                        <td class="text-success"><i class="fas fa-check-circle fa-lg"></i> تمتلك متجرك وبياناتك للأبد</td>
+                        <td class="text-danger"><i class="fas fa-times-circle fa-lg"></i> المتجر "مستأجر" وتتحكم به الشركة</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">التكاليف الشهرية</td>
+                        <td class="text-success"><i class="fas fa-check-circle fa-lg"></i> مجاني (لا توجد رسوم للمنصة)</td>
+                        <td class="text-danger"><i class="fas fa-times-circle fa-lg"></i> رسوم شهرية ثابتة + عمولات بيع</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">تخصيص الكود</td>
+                        <td class="text-success"><i class="fas fa-check-circle fa-lg"></i> إمكانية تعديل أي تفصيلة برمجية</td>
+                        <td class="text-danger"><i class="fas fa-times-circle fa-lg"></i> خيارات محدودة جداً للتعديل</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">الدعم العربي</td>
+                        <td class="text-success"><i class="fas fa-check-circle fa-lg"></i> مجتمع OpenCart Arab المتكامل</td>
+                        <td class="text-muted"><i class="fas fa-minus-circle fa-lg"></i> دعم عام (قد لا يتوفر بالعربية)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+</section>
 
-    <div class="social-links">
-      <p><strong>تابعنا على منصات التواصل:</strong></p>
-      <a href="https://www.facebook.com/opencartarab" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook"></i>فيسبوك
-      </a>
-      |
-      <a href="https://x.com/OpenCartArab" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-x-twitter"></i>إكس
-      </a>
-      |
-      <a href="https://www.youtube.com/@Opencartarab" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-youtube"></i>يوتيوب
-      </a>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-2">خدمة احترافية</span>
+                <h2 class="fw-bold">استضافة سريعة وآمنة مصممة خصيصًا لمتاجر OpenCart</h2>
+                <p class="text-muted">ابدأ متجرك بثقة أو انقل متجرك إلينا بسهولة</p>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-4">
+                    <div class="card custom-card price-card p-4">
+                        <h4 class="fw-bold">الاستضافة الأساسية</h4>
+                        <div class="my-3"><span class="display-6 fw-bold text-primary">$9.17</span>/ شهر</div>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> استضافة مخصصة لمتاجر OpenCart</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> سرعة جيدة وأداء مستقر</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> لوحة تحكم سهلة</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> شهادة SSL مجانية</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> نسخ احتياطي دوري</li>
+                        </ul>
+                        <button class="btn btn-outline-dark w-100 py-3">اطلبها الآن</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card custom-card price-card featured p-4 bg-white shadow">
+                        <div class="text-center mb-3"><span class="badge bg-danger">الأكثر طلباً</span></div>
+                        <h4 class="fw-bold">الاستضافة المتقدمة</h4>
+                        <div class="my-3"><span class="display-5 fw-bold text-primary">$28.47</span>/ شهر</div>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="fas fa-star text-warning me-2"></i> أداء أعلى وسرعة أفضل</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> موارد أكبر (CPU / RAM)</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> حماية محسّنة</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> دعم فني سريع</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> تحسينات خاصة بـ OpenCart</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 py-3">اطلبها الآن</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card custom-card price-card p-4">
+                        <h4 class="fw-bold">نقل + استضافة</h4>
+                        <div class="my-3"><span class="display-6 fw-bold text-primary">$12.99</span>/ شهر</div>
+                        <p class="text-success fw-bold small"><i class="fas fa-gift me-1"></i> النقل مجاني لفترة محدودة</p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> نقل المتجر بدون فقدان بيانات</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> إعداد الاستضافة الجديدة</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> اختبار المتجر بعد النقل</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> اختبار المتجر بعد النقل</li>
+                        </ul>
+                        <button class="btn btn-outline-dark w-100 py-3">اطلب النقل الآن</button>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-muted">جميع باقات الاستضافة متوافقة مع خدمات الدعم الفني لدينا</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">اختر باقة الدعم التي تناسب متجرك واحصل على مساعدة احترافية لأوبن كارت بالعربي</h2>
+        <div class="row g-4">
+            
+            <div class="col-lg-6">
+                <div class="card support-card h-100 shadow-sm border-0 p-4 border-start border-primary border-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="support-icon-box bg-light text-primary me-3">
+                            <i class="fas fa-search-plus fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-0">1. الفحص المجاني للمتجر</h4>
+                    </div>
+                    <ul class="list-unstyled flex-grow-1">
+                        <li><i class="fas fa-check text-muted me-2"></i> فحص مبدئي للأداء واكتشاف الأخطاء الظاهرة</li>
+                        <li><i class="fas fa-check text-muted me-2"></i> مراجعة توافق الإضافات وتقديم توصيات واضحة</li>
+                    </ul>
+                    <div class="alert alert-info py-2 small mb-0 mt-3">
+                        <i class="fas fa-info-circle me-1"></i> يتم مرة واحدة - لا يشمل الإصلاح
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card support-card h-100 shadow-sm border-0 p-4 border-start border-success border-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="support-icon-box bg-light text-success me-3">
+                            <i class="fas fa-bolt fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-0">2. باقة الإصلاح السريع - <span class="text-success">29$</span></h4>
+                    </div>
+                    <ul class="list-unstyled flex-grow-1">
+                        <li><i class="fas fa-check text-muted me-2"></i> إصلاح مشكلة تقنية واحدة (قالب أو إضافات)</li>
+                        <li><i class="fas fa-check text-muted me-2"></i> تنفيذ سريع خلال 24–48 ساعة</li>
+                    </ul>
+                    <button class="btn btn-success w-100 mt-3">اطلب الإصلاح الآن</button>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card support-card h-100 shadow-sm border-0 p-4 border-start border-warning border-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="support-icon-box bg-light text-warning me-3">
+                            <i class="fas fa-level-up-alt fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-0">3. باقة ترقية المتجر - <span class="text-warning">تبدأ من 50$</span></h4>
+                    </div>
+                    <p class="small text-muted mb-2">متوسط السعر: 70$ – 90$</p>
+                    <ul class="list-unstyled flex-grow-1">
+                        <li><i class="fas fa-check text-muted me-2"></i> نسخة احتياطية واختبار التوافق</li>
+                        <li><i class="fas fa-star text-primary me-2"></i> يتم تحديد السعر بدقة بعد الفحص المجاني</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card support-card h-100 shadow-sm border-0 p-4 border-start border-dark border-5 bg-dark text-white">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="support-icon-box bg-secondary text-white me-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-0">4. الباقة الاحترافية - <span class="text-info">100$</span></h4>
+                    </div>
+                    <ul class="list-unstyled flex-grow-1">
+                        <li><i class="fas fa-check text-info me-2"></i> إصلاح حتى 3 مشاكل + تحسين السرعة</li>
+                        <li><i class="fas fa-check text-info me-2"></i> ضبط الحماية + دعم فني لمدة 3 أيام</li>
+                    </ul>
+                    <span class="badge bg-danger">الأكثر قيمة مقابل السعر</span>
+                </div>
+            </div>
+
+        </div>
     </div>
+</section>
 
-    <p style="font-size:0.85rem;">
-      نظام عمل رقمي | تواصل رسمي عبر البريد الإلكتروني
-    </p>
+    <section class="py-5">
+        <div class="container w-75">
+            <h2 class="text-center fw-bold mb-5">الأسئلة الشائعة</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item shadow-sm mb-3 border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                            هل يجب عليّ منح صلاحية الوصول إلى موقعي؟
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعم، سنحتاج إلى صلاحية الوصول إلى موقعك الإلكتروني لنتمكن من العمل عليه. يمكنك تغيير بيانات الدخول بعد الانتهاء.
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="text-center mt-5">
+                <p>هل لديك أسئلة أخرى؟ راسلنا عبر بريد الموقع</p>
+                <a href="mailto:info@opencartarab.com" class="h5 fw-bold text-primary">info@opencartarab.com</a>
+            </div>
+        </div>
+    </section>
 
+    <div id="footer-placeholder"></div>
 
-    <p style="margin-top:30px;">
-      &copy; <span id="year"></span> أوبن كارت العرب - جميع الحقوق محفوظة.
-    </p>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+        // سكربت بسيط لجلب الهيدر والفوتر
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
+        loadComponent('header-placeholder', 'header.html');
+        loadComponent('footer-placeholder', 'footer.html');
     </script>
-  </footer>
 </body>
 </html>
