@@ -1,0 +1,79 @@
+/* --- 1. المتغيرات والقواعد العامة --- */
+:root {
+    --main-blue: #2c3e50;
+    --oc-blue: #27ae60;
+    --gold: #f39c12;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+}
+
+body { font-family: 'Cairo', sans-serif; background-color: var(--light-bg); color: #333; }
+
+/* --- 2. الهيرو (Hero Sections) --- */
+.hero, .sub-hero { color: white; transition: all 0.5s ease; }
+
+/* الهيرو الافتراضي (الأساسية والرئيسية) */
+.hero, .sub-hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); }
+
+.hero { padding: 100px 0; border-bottom-left-radius: 50% 20px; border-bottom-right-radius: 50% 20px; }
+.sub-hero { padding: 60px 0; margin-bottom: 40px; }
+
+/* تخصيصات الهيرو حسب الصفحات */
+.theme-advanced .sub-hero { background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-bottom: 4px solid var(--oc-blue); padding: 70px 0; }
+.theme-transfer .sub-hero { background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%); }
+
+/* --- 3. الكروت والعناصر المشتركة --- */
+.custom-card, .details-card { background: var(--white); border: none; border-radius: 15px; transition: all 0.3s ease; }
+.custom-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.details-card { border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px; }
+
+.price-card { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.price-card.featured { border: 2px solid var(--oc-blue); transform: scale(1.05); z-index: 2; }
+
+/* --- 4. عناصر صفحات التفاصيل (Features) --- */
+.feature-item { padding: 15px; border-bottom: 1px solid #eee; display: flex; align-items: center; }
+.feature-item:last-child { border-bottom: none; }
+.feature-item i { margin-left: 15px; font-size: 1.2rem; color: var(--oc-blue); }
+
+/* تخصيص أيقونات المتقدمة */
+.theme-advanced .feature-item { padding: 18px; border-bottom: 1px solid #f1f1f1; }
+.theme-advanced .feature-item i { color: var(--gold); font-size: 1.3rem; }
+
+/* خطوات صفحة النقل */
+.transfer-step { position: relative; padding-right: 45px; margin-bottom: 25px; }
+.transfer-step i { 
+    position: absolute; right: 0; top: 5px; color: var(--oc-blue); 
+    background: rgba(39, 174, 96, 0.1); width: 35px; height: 35px; 
+    display: flex; align-items: center; justify-content: center; border-radius: 50%; 
+}
+
+/* --- 5. صناديق الدفع (PayPal Boxes) --- */
+.paypal-box { border-radius: 15px; padding: 30px; text-align: center; margin-top: 20px; }
+
+.theme-basic .paypal-box { background-color: #fff9e6; border: 2px dashed var(--gold); }
+.theme-advanced .paypal-box { background-color: #f0f7f4; border: 2px solid var(--oc-blue); }
+.theme-transfer .paypal-box { background-color: #fff; border: 2px solid #eee; transition: border-color 0.3s; }
+.theme-transfer .paypal-box:hover { border-color: var(--oc-blue); }
+
+/* --- 6. عناصر الصفحة الرئيسية (Support & Tables) --- */
+.support-card { transition: all 0.3s ease; border-start-width: 5px !important; }
+.support-card:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+.support-icon-box { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+.comparison-table thead { background: linear-gradient(90deg, #2c3e50, #3498db); }
+.comparison-table td, .comparison-table th { padding: 1.5rem !important; }
+
+/* شارات إضافية */
+.featured-badge-top { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #dc3545; color: white; padding: 5px 20px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+.bonus-badge { background: #fff3cd; color: #856404; padding: 10px; border-radius: 10px; border: 1px solid #ffeeba; font-size: 0.9rem; }
+
+/* الاستجابة */
+@media (max-width: 768px) { .hero { padding: 60px 0; } .price-card.featured { transform: scale(1); margin: 15px 0; } }
+/* تنسيقات إضافية لصفحة الأرشيف */
+.table td {
+    vertical-align: middle; /* لجعل النص والأزرار في منتصف الخلية */
+}
+
+.badge {
+    font-family: sans-serif; /* لجعل أرقام النسخ تبدو أوضح */
+    padding: 8px 12px;
+}
